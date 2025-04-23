@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Empire Links - Soul Saviour</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #000000, #1a0000, #330000);
+      background-size: 400% 400%;
+      animation: backgroundShift 15s ease infinite;
+      font-family: 'Orbitron', sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    @keyframes backgroundShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .logo {
+      width: 120px;
+      display: block;
+      margin: 30px auto 10px auto;
+      filter: drop-shadow(0 0 10px red);
+    }
+
+    .crawl-wrapper {
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+      perspective: 300px;
+      margin-bottom: 40px;
+    }
+
+    .crawl {
+      font-size: 1.2rem;
+      position: absolute;
+      bottom: -100%;
+      width: 100%;
+      transform-origin: 50% 100%;
+      animation: crawlAnim 40s linear infinite;
+      text-align: center;
+    }
+
+    @keyframes crawlAnim {
+      0% {
+        bottom: -100%;
+        transform: rotateX(20deg) translateZ(0);
+      }
+      100% {
+        bottom: 100%;
+        transform: rotateX(25deg) translateZ(-250px);
+      }
+    }
+
+    h1 {
+      text-shadow: 0 0 15px red, 0 0 25px crimson;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .link-btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 35px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-left: 4px solid red;
+      border-right: 4px solid red;
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .link-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(255,0,0,0.2), rgba(255,0,0,0.6), rgba(255,0,0,0.2));
+      transition: all 0.5s ease-in-out;
+    }
+
+    .link-btn:hover::before {
+      left: 100%;
+    }
+
+    .link-btn:hover {
+      background-color: #ff1c1c;
+      color: black;
+      box-shadow: 0 0 20px #ff1c1c;
+      transform: scale(1.08);
+    }
+
+    footer {
+      margin: 40px auto 20px auto;
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo -->
+  <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Star_Wars_Logo.svg" alt="Empire Logo" />
+
+  <!-- Crawl Animation -->
+  <div class="crawl-wrapper">
+    <div class="crawl">
+      <p>A long time ago in a galaxy far,<br> far away...</p>
+      <p><strong>SOUL SAVIOUR</strong> rises again.</p>
+      <p>The dark side strengthens. The empire grows.</p>
+      <p>All who stand in the way... shall fall.</p>
+      <p>Welcome, traveler. Join the darkness. Explore the power.</p>
+    </div>
+  </div>
+
+  <!-- Heading -->
+  <h1>Links of the Empire</h1>
+
+  <!-- Links -->
+  <div class="links">
+    <a class="link-btn" href="https://www.google.com" target="_blank">Google</a>
+    <a class="link-btn" href="https://www.instagram.com" target="_blank">Instagram</a>
+    <a class="link-btn" href="https://www.facebook.com" target="_blank">Facebook</a>
+    <a class="link-btn" href="https://www.twitter.com" target="_blank">Twitter</a>
+    <a class="link-btn" href="https://www.youtube.com" target="_blank">YouTube</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Soul Saviour | Power. Fear. Control.
+  </footer>
+
+  <!-- Background music -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2023/03/03/audio_994ff9f31c.mp3?filename=dark-intention-140291.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+</body>
+</html>
