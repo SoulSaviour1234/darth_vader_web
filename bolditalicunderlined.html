@@ -1,44 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bold, Italic and Underlined</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Futuristic Text Effects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #1e0033, #00334e, #002e29);
+      color: white;
+      font-family: 'Michroma', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
 
-        h1 {
-            text-align: center;
-            color: #333;
-        }
+    .big-text {
+      font-size: 2.5em;
+      background: linear-gradient(90deg, #00ffd0, #9b00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #fff;
+      width: 0;
+      animation: typing 3s steps(30, end) forwards, glow 2s infinite alternate;
+    }
 
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
+    .big-text:hover {
+      text-shadow: 0 0 10px #00ffd0, 0 0 20px #9b00ff;
+    }
 
-        .bold {
-            font-weight: bold;
-        }
+    .small-text {
+      font-size: 0.9em;
+      color: #b0f0ff;
+      animation: fadeIn 4s ease-in;
+      margin-top: 20px;
+    }
 
-        .italic {
-            font-style: italic;
-        }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 50% }
+    }
 
-        .underline {
-            text-decoration: underline;
-        }
-    </style>
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #00ffd0; }
+      to { text-shadow: 0 0 20px #9b00ff; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0 }
+      to { opacity: 1 }
+    }
+  </style>
 </head>
 <body>
-    <h1>Text Formatting Examples</h1>
-    <p class="bold">This is a <b>Bold</b> Sentence</p>
-    <p class="italic">This is an <i>Italic</i> Sentence</p>
-    <p class="underline">This is an <u>Underlined</u> Sentence</p>
-    <b><i><u>This is a Bold, Italic, and Underlined Sentence</u></i></b>
+  <div class="big-text">This is a BIG SENTENCE</div>
+  <div class="small-text">This is a small sentence</div>
 </body>
 </html>
