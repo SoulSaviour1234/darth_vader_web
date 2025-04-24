@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div and span</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #1f4037, #99f2c8);
+            color: #ffffff;
+        }
+
+        div, span {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px 40px;
+            border-radius: 12px;
+            margin: 10px;
+            font-size: 1.2em;
+            text-align: center;
+            box-shadow: 0 0 20px #99ffcc;
+            transition: all 0.3s ease;
+        }
+
+        div:hover, span:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px #ffffff, 0 0 60px #ffffff;
+            color: #000000;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        THIS IS A CONTENT INSIDE DIV
+    </div>
+    <span>
+        THIS IS A COMTENT INSIDE SPAN
+    </span>
+</body>
+</html>
