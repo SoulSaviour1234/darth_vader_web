@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sci-Fi Vehicles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    h1, h2 {
+      background: linear-gradient(45deg, #00f5ff, #ff00d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      margin: 30px 0 10px;
+    }
+
+    .typing-text {
+      display: none;
+    }
+
+    .section {
+      padding: 40px 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+      border: 2px dashed #00f5ff;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .card {
+  background: #2a2a3a;  /* Darker background for the card */
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: #e0e0e0;  /* Light gray background for images */
+}
+
+  </style>
+</head>
+<body>
+  <div class="section">
+    <h1>🚗 Futuristic Car Showcase</h1>
+    <div class="grid">
+      <div class="card">
+        <h2>Lamborghini</h2>
+        <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_gw/huracan/2023/09_18_refresh/hero/gw_hura_hero_01_m.jpg" alt="Lamborghini">
+      </div>
+      <div class="card">
+        <h2>Ferrari</h2>
+        <img src="https://carconfigurator.ferrari.com/rt-assets/data/cars/296gts/ui/splashpage.jpg" alt="Ferrari">
+      </div>
+      <div class="card">
+        <h2>Porsche</h2>
+        <img src="https://images-porsche.imgix.net/-/media/AD24345646AA45B7B04D01140FD13E64_AF0055D97F5C4FACB6339930D80D2DBD_NEW-Panamera---Desktop?iar=0&w=999&ar=3%3A4&q=85&auto=format" alt="Porsche">
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h1>🏍️ Futuristic Bike Showcase</h1>
+    <div class="grid">
+      <div class="card">
+        <h2>BMW</h2>
+        <img src="bike1.jpg" alt="BMW">
+      </div>
+      <div class="card">
+        <h2>Yamaha</h2>
+        <img src="bike2.jpg" alt="Yamaha">
+      </div>
+      <div class="card">
+        <h2>Kawasaki</h2>
+        <img src="bike4.jpg" alt="Kawasaki">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
