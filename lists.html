@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Time</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #d79d47, #5f4b3e); /* coffee-colored gradient */
+            color: #fff;
+            font-family: 'Rock Salt', cursive;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #f5b942; /* Coffee yellow */
+        }
+
+        ul, ol, dl {
+            max-width: 800px;
+            width: 100%;
+            margin: 0;
+            padding: 20px;
+            list-style-position: inside;
+        }
+
+        li, dt, dd {
+            font-size: 1.2em;
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        li:hover, dt:hover {
+            background-color: #f5b942; /* Coffee yellow on hover */
+            color: #2c2c2c;
+            transform: scale(1.05);
+        }
+
+        h1:hover {
+            color: #f8c66b;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .container {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        .coffee-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            opacity: 0.8;
+            transition: opacity 0.5s ease;
+        }
+
+        .coffee-image:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Coffee Lovers' Paradise</h1>
+
+        <h2>Ingredients required to make coffee</h2>
+        <ul>
+            <li>Ground coffee</li>
+            <li>Hot water</li>
+            <li>Coffee maker (e.g., French press, drip machine, moka pot, etc.)</li>
+            <li>Mug or cup</li>
+            <li>Spoon or stirrer</li>
+            <li>Optional: Sugar, milk, cream, or sweetener</li>
+            <li>Kettle or pot (to boil water)</li>
+            <li>Coffee filter (if using drip method)</li>
+        </ul>
+
+        <h2>Steps to make coffee</h2>
+        <ol>
+            <li>Boil water.</li>
+            <li>Add ground coffee to French press.</li>
+            <li>Pour hot water over the coffee.</li>
+            <li>Stir gently.</li>
+            <li>Place lid and let it steep for 4 minutes.</li>
+            <li>Press the plunger down slowly.</li>
+            <li>Pour into a mug and enjoy.</li>
+        </ol>
+
+        <h2>Types of Coffee</h2>
+        <dl>
+            <dt>Espresso</dt>
+            <dd>A strong, concentrated coffee made by forcing hot water through finely-ground coffee beans. It’s the base for many other coffee drinks.</dd>
+
+            <dt>Americano</dt>
+            <dd>Espresso diluted with hot water, giving it a similar strength to regular brewed coffee but with a different flavor.</dd>
+
+            <dt>Cappuccino</dt>
+            <dd>Equal parts espresso, steamed milk, and milk foam. Has a stronger espresso flavor compared to a latte.</dd>
+
+            <dt>Latte</dt>
+            <dd>A shot of espresso mixed with a larger amount of steamed milk and a light layer of foam on top. Smooth and creamy.</dd>
+
+            <dt>Iced Coffee</dt>
+            <dd>Regular brewed coffee served cold, typically poured over ice and optionally sweetened or mixed with milk.</dd>
+        </dl>
+
+        <img src="https://images.unsplash.com/photo-1563311657-4a3253c0727c" alt="Coffee Image" class="coffee-image">
+    </div>
+</body>
+</html>
