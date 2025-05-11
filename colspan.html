@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Colspan Feature</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: white;
+    }
+    h1 {
+      text-align: center;
+      color: #f3e5ab;
+    }
+    .search-box {
+      text-align: center;
+      margin: 20px 0;
+    }
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 300px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff10;
+      backdrop-filter: blur(10px);
+    }
+    th, td {
+      border: 1px solid #ffffff40;
+      padding: 10px;
+      text-align: center;
+      color: #fff;
+    }
+    th {
+      background-color: #8e44ad;
+      color: #ffffff;
+    }
+    tr:nth-child(even) {
+      background-color: #ffffff15;
+    }
+    tr:hover {
+      background-color: #ffffff25;
+    }
+    .thank-row {
+      background: transparent;
+      font-size: 26px;
+      font-weight: bold;
+      font-family: 'Courier New', Courier, monospace;
+      color: transparent;
+      text-align: center;
+      background-image: linear-gradient(45deg, #ff6ec4, #7873f5);
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-shadow: 0 0 8px rgba(255,255,255,0.8);
+      animation: pulse 1.5s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); text-shadow: 0 0 8px rgba(255,255,255,0.8); }
+      50% { transform: scale(1.05); text-shadow: 0 0 18px rgba(255,255,255,1); }
+      100% { transform: scale(1); text-shadow: 0 0 8px rgba(255,255,255,0.8); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tables in HTML - Student Marks</h1>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for names or roll no...">
+  </div>
+
+  <table id="studentTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Roll No</th>
+        <th>Marks Obtained</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Srijit Paul</td><td>UG/SOET/30/24/538</td><td>98.00</td></tr>
+      <tr><td>Asmita Mishra</td><td>UG/SOET/30/24/562</td><td>99.00</td></tr>
+      <tr><td>Souradeep Pradhan</td><td>UG/SOET/30/24/540</td><td>95.00</td></tr>
+      <tr><td>Priya Sen</td><td>UG/SOET/30/24/541</td><td>91.50</td></tr>
+      <tr><td>Rahul Das</td><td>UG/SOET/30/24/542</td><td>93.20</td></tr>
+      <tr><td>Tanisha Roy</td><td>UG/SOET/30/24/543</td><td>90.00</td></tr>
+      <tr><td>Rohan Gupta</td><td>UG/SOET/30/24/544</td><td>85.75</td></tr>
+      <tr><td>Ankita Saha</td><td>UG/SOET/30/24/545</td><td>92.40</td></tr>
+      <tr><td>Ritvik Bose</td><td>UG/SOET/30/24/546</td><td>87.90</td></tr>
+      <tr><td>Megha Dey</td><td>UG/SOET/30/24/547</td><td>89.35</td></tr>
+      <tr><td>Akash Roy</td><td>UG/SOET/30/24/548</td><td>94.80</td></tr>
+      <tr><td>Simran Kaur</td><td>UG/SOET/30/24/549</td><td>88.10</td></tr>
+      <tr><td>Vikram Jha</td><td>UG/SOET/30/24/550</td><td>90.60</td></tr>
+      <tr><td>Nikita Sharma</td><td>UG/SOET/30/24/551</td><td>97.25</td></tr>
+      <tr><td>Ritesh Verma</td><td>UG/SOET/30/24/552</td><td>85.40</td></tr>
+      <tr><td>Neha Kapoor</td><td>UG/SOET/30/24/553</td><td>96.80</td></tr>
+      <tr><td>Aryan Mukherjee</td><td>UG/SOET/30/24/554</td><td>91.10</td></tr>
+      <tr><td>Ishita Ghosh</td><td>UG/SOET/30/24/555</td><td>93.90</td></tr>
+      <tr><td>Kunal Singh</td><td>UG/SOET/30/24/556</td><td>89.00</td></tr>
+      <tr><td>Shreya Das</td><td>UG/SOET/30/24/557</td><td>92.65</td></tr>
+      <tr class="thank-row">
+        <td colspan="3">✨ THANK YOU ✨</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    function searchTable() {
+      const input = document.getElementById("searchInput");
+      const filter = input.value.toUpperCase();
+      const table = document.getElementById("studentTable");
+      const tr = table.getElementsByTagName("tr");
+
+      for (let i = 1; i < tr.length; i++) {
+        let tds = tr[i].getElementsByTagName("td");
+        let matched = false;
+        for (let j = 0; j < tds.length - 1; j++) {
+          if (tds[j]) {
+            let txtValue = tds[j].textContent || tds[j].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              matched = true;
+              break;
+            }
+          }
+        }
+        tr[i].style.display = matched ? "" : "none";
+      }
+    }
+  </script>
+</body>
+</html>
