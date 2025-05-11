@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Relationship Form ❤️</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffe5b4, #d2b48c);
+      padding: 20px;
+      color: #3e2723;
+    }
+
+    h1 {
+      text-align: center;
+      color: #4e342e;
+      font-size: 2.5rem;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #fff3e0;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    div {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #bcaaa4;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    button {
+      background-color: #6d4c41;
+      color: white;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #4e342e;
+    }
+
+    .emoji-label {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💌 Connection Form 💌</h1>
+
+  <form id="loveForm" action="https://getform.io/f/bvrwkvlb" method="POST">
+    <div>
+      <label for="Name">👤 Name:</label>
+      <input id="Name" name="name" type="text" placeholder="Enter your name" required />
+    </div>
+    <div>
+      <label for="Roll">🧾 Roll No:</label>
+      <input id="Roll" name="roll" type="text" placeholder="Enter roll number" />
+    </div>
+    <div>
+      <label for="Reg">📜 Reg No:</label>
+      <input id="Reg" name="reg" type="text" placeholder="Enter registration number" />
+    </div>
+    <div>
+      <label for="Phone">📞 Phone No:</label>
+      <input id="Phone" name="phone" type="tel" placeholder="Enter phone number" />
+    </div>
+    <div>
+      <label for="Email">📧 Email:</label>
+      <input id="Email" name="email" type="email" placeholder="Enter email" required />
+    </div>
+    <div>
+      <label for="Password">🔐 Password:</label>
+      <input id="Password" name="password" type="password" placeholder="Enter password" />
+    </div>
+    <div>
+      <label for="DOB">🎂 Date of Birth:</label>
+      <input id="DOB" name="dob" type="date" />
+    </div>
+    <div>
+      <label for="Gender">⚧️ Gender:</label>
+      <select id="Gender" name="gender">
+        <option value="" disabled selected>Select gender</option>
+        <option value="Male">♂️ Male</option>
+        <option value="Female">♀️ Female</option>
+        <option value="Other">⚧️ Other</option>
+      </select>
+    </div>
+    <div>
+      <p class="emoji-label">❓ Are we...?</p>
+      <label><input type="radio" name="relationship" value="Just Friends">👫 Just Friends</label><br>
+      <label><input type="radio" name="relationship" value="Good Friends">🤝 Good Friends</label><br>
+      <label><input type="radio" name="relationship" value="Dating">💑 Dating</label><br>
+      <label><input type="radio" name="relationship" value="Secretly Dating">💖 Secretly Dating</label><br>
+      <label><input type="radio" name="relationship" value="Strangers Again">😶 Strangers Again</label>
+    </div>
+    <div>
+      <label><input type="checkbox" name="terms" required /> ✅ I agree to the terms of our love contract</label>
+    </div>
+    <div>
+      <label for="comments">📝 Comments:</label>
+      <textarea id="comments" name="comments" rows="5" placeholder="Write your feelings... ❤️"></textarea>
+    </div>
+    <div>
+      <button type="submit">💌 SUBMIT</button>
+    </div>
+  </form>
+
+  <audio id="submitSound" src="https://www.myinstants.com/media/sounds/anime-wow-sound-effect.mp3"></audio>
+
+  <script>
+    const form = document.getElementById("loveForm");
+    const sound = document.getElementById("submitSound");
+
+    form.addEventListener("submit", function(event) {
+      sound.play();
+      setTimeout(() => {
+        alert("Thank you for submitting! 💕 We'll review your connection status soon!");
+        form.reset();
+      }, 800); // Delay to let sound play before alert and reset
+    });
+  </script>
+
+</body>
+</html>
