@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Momo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+
+      font-family: 'Kaushan Script', cursive;
+      background: linear-gradient(136deg, #ff1c00, #fecb06);
+      color: #090d3c;
+      overflow-x: hidden;
+    }
+
+    body {
+      cursor: grab;
+    }
+
+    body:active {
+      cursor: grabbing;
+    }
+
+
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+    }
+
+    header h1 {
+      font-family: 'Kaushan Script', cursive;
+      font-size: 3em;
+      animation: fadeInDown 1.5s ease;
+    }
+
+    header p {
+      font-family: 'Kaushan Script', cursive;
+      font-size: 1.5em;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .swiper-container {
+      width: 90%;
+      max-width: 600px;
+      margin: 40px auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 10px #130831;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 5s ease;
+    }
+
+    .swiper-slide img:hover {
+      transform: scale(1.05);
+    }
+
+    section {
+      text-align: center;
+      margin: 30px 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    section h2 {
+      font-family: 'Kaushan Script', cursive;
+      font-size: 2em;
+    }
+
+    section h2 {
+      font-family: 'Kaushan Script', cursive;
+      font-size: 2em;
+    }
+
+    section p {
+      max-width: 600px;
+      margin: auto;
+      font-size: 1.5em;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1.5em;
+      border: none;
+      border-radius: 15px;
+      background-color: #130831;
+      color: #fecb06;
+      font-family: 'Kaushan Script', cursive;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00fffb;
+      font-family: 'Kaushan Script', cursive;
+      color: #000000;
+    }
+
+    #sparkle-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    #secretMessage button {
+      padding: 10px 20px;
+      font-size: 1.5em;
+      border: none;
+      border-radius: 15px;
+      background: transparent ;
+      color: #000000;
+      font-family: 'Kaushan Script', cursive;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+    #secretMessage button:hover {
+
+      background: transparent ;
+      font-family: 'Kaushan Script', cursive;
+      color: #ff0000;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body onload="launchConfetti()">
+  <canvas id="sparkle-canvas"></canvas>
+
+  <header
+    style="background-color: #130831; color: #ff0000; text-align: center; padding: 30px 20px; font-family: 'Kaushan Script', cursive; border-bottom: 3px solid #fff3e0;">
+    <h1>Happy Birthday Momo...</h1>
+    <p>You will always be my favourite momo...</p>
+  </header>
+
+  <section style="text-align:center;">
+    <h2>🎵 This Song is for you, Orange 🎵</h2>
+    <div style="display:inline-block; max-width:600px; width:100%;">
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/2cPUB8EOT6AfJ8oxhyoNXL?utm_source=generator&theme=0" width="100%"
+        height="152" frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section>
+    <h2>Brace yourself… you're about to witness peak Orange cuteness 🍊📸</h2>
+  </section>
+
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://i.ibb.co/Vc95dgDT/Whats-App-Image-2025-06-11-at-11-50-31-PM-1.jpg"
+          alt="Orange 1" /></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/9HH4w56K/Whats-App-Image-2025-06-11-at-11-50-31-PM.jpg"
+          alt="Orange 2" /></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/TDyncBYG/Whats-App-Image-2025-06-11-at-11-50-30-PM-1.jpg"
+          alt="Orange 3" /></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/pVyNYPq/Whats-App-Image-2025-06-11-at-11-50-30-PM.jpg"
+          alt="Orange 4" /></div>
+      <div class="swiper-slide"><img src="https://i.ibb.co/VczmhsWY/Whats-App-Image-2025-06-11-at-11-50-29-PM.jpg"
+          alt="Orange 5" /></div>
+    </div>
+  </div>
+
+  <section>
+    <h2>Wishing you all the smiles and laughter on your special day, Orange! 🍊💫</h2>
+    <p id="dedicatedPara" style="display:none">
+      To my Orange Momo,
+      From the moment you stumbled into my life with your quirky charm and infectious laughter, everything has felt a
+      little brighter, a little warmer, and a whole lot more magical. You’re not just someone I cherish—you’re someone
+      who makes the world feel like home. Whether you're laughing like a maniac over the silliest things or eating my
+      head like it's your favourite momo, every second with you is unforgettable. On this special day, I just want you
+      to know: you will always be my favourite momo... and no matter where life takes us, you’ll always have a place in
+      the happiest corner of my heart. Happy Birthday, Orange. Keep glowing, keep annoying, and never stop being the
+      beautifully weird soul that you are.
+    </p>
+    <button onclick="revealMessage()">Read Something Special 💌</button>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      loop: true,
+    });
+
+
+    function revealMessage() {
+      const para = document.getElementById('dedicatedPara');
+      const text = para.innerHTML.trim();
+      para.innerHTML = ''; // clear it
+      para.style.display = 'block';
+
+      let i = 0;
+      const speed = 30; // typing speed in ms
+
+      function typeWriter() {
+        if (i < text.length) {
+          para.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+      typeWriter();
+
+      event.target.style.display = 'none';
+
+      confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    }
+
+
+
+    function launchConfetti() {
+      confetti({
+        particleCount: 200,
+        spread: 90,
+        origin: { y: 0.6 }
+      });
+    }
+  </script>
+  <script>
+    const canvas = document.getElementById('sparkle-canvas');
+    const ctx = canvas.getContext('2d');
+
+    let sparkles = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    function createSparkle() {
+      return {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 2 + 1,
+        alpha: Math.random(),
+        dx: (Math.random() - 0.5) * 0.5,
+        dy: (Math.random() - 0.5) * 0.5,
+      };
+    }
+
+    for (let i = 0; i < 100; i++) {
+      sparkles.push(createSparkle());
+    }
+
+    function drawSparkles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let sparkle of sparkles) {
+        ctx.beginPath();
+        ctx.arc(sparkle.x, sparkle.y, sparkle.radius, 0, Math.PI * 2, false);
+        ctx.fillStyle = `rgba(255, 255, 255, ${sparkle.alpha})`;
+        ctx.fill();
+      }
+    }
+
+    function updateSparkles() {
+      for (let sparkle of sparkles) {
+        sparkle.x += sparkle.dx;
+        sparkle.y += sparkle.dy;
+
+        if (sparkle.x < 0 || sparkle.x > canvas.width || sparkle.y < 0 || sparkle.y > canvas.height) {
+          Object.assign(sparkle, createSparkle());
+        }
+      }
+    }
+
+    function animate() {
+      drawSparkles();
+      updateSparkles();
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+    // ✅ CORRECTED Easter Egg JS — paste this
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const secretMomo = document.getElementById('secretMomo');
+      const secretMessage = document.getElementById('secretMessage');
+
+      secretMomo.addEventListener('click', function () {
+        secretMessage.style.display = 'block';
+        confetti({
+          particleCount: 200,
+          spread: 100,
+          origin: { y: 0.6 }
+        });
+      });
+    });
+
+    function closeSecret() {
+      document.getElementById('secretMessage').style.display = 'none';
+    }
+
+
+  </script>
+
+  <footer
+    style="background-color: #130831; color: #fecb06; text-align: center; padding: 30px 20px; font-family: 'Kaushan Script', cursive; margin-top: 60px; border-top: 3px solid #fff3e0;">
+    <p style="font-size: 1.5em; margin-bottom: 10px;">Made with all my heart 💛 for my favourite momo</p>
+    <p style="font-size: 1.2em; margin-bottom: 5px;">Forever your sweet headache,</p>
+    <p style="font-size: 1.3em; font-weight: bold;">— Your Comfort Zone</p>
+    <div style="margin-top: 20px; font-size: 0.9em; color: #ffffff;">
+      <p>&copy; 2025 My Momo's Birthday | All Rights Reserved</p>
+    </div>
+  </footer>
+  <!-- Secret hidden momo emoji -->
+  <div id="secretMomo" style="position: fixed; bottom: 20px; right: 20px; font-size: 2em; cursor: pointer;">🥟</div>
+
+  <!-- Secret message modal -->
+  <div id="secretMessage"
+    style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:linear-gradient(136deg, #b700ff, #06d5fe); color:#000000; padding:30px; border-radius:20px; font-family: 'Kaushan Script', cursive; text-align:center; z-index:999;">
+    🎉 You found my secret message for you! <br><br> Listen! You’re even cuter than all the cute things in the universe combined. 💛🥟🍊 <br><br> And I LOVE YOU to the moon and back...
+    <br><br><button onclick="closeSecret()">Close</button>
+  </div>
+
+
+
+</body>
+
+</html>
